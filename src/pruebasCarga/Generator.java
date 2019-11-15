@@ -12,8 +12,8 @@ public class Generator {
 	public Generator()
 	{
 		Task work = createTask();
-		int numberOfTasks = 100;
-		int gapBetweenTasks = 1000;
+		int numberOfTasks = 400;
+		int gapBetweenTasks = 20;
 		generator = new LoadGenerator("Pruebas de carga servidores", numberOfTasks, work, gapBetweenTasks);
 		generator.generate();
 				
@@ -21,7 +21,7 @@ public class Generator {
 	
 	private Task createTask()
 	{
-		return new ClientServerTask();
+		return new ClienteServerTask();
 	}
 	
 	public static void main(String[] args)
